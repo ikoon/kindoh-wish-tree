@@ -1,0 +1,3 @@
+#original-tree-view .wish-model-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;display:block;visibility:hidden;touch-action:pan-y pinch-zoom;}
+#original-tree-view[data-tilt-renderer='model3d'] .wish-model-canvas{visibility:visible;cursor:grab;}
+#original-tree-view[data-dragging='true'] .wish-model-canvas{cursor:grabbing;}

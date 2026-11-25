@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#00112f">
+  <meta name="description" content="올겨울, 우리 가족의 소원을 나누고 특별한 크리스마스 트리를 함께 완성해 주세요!">
+  <title>꿈꾸는 소원트리 | 킨도 베베가드 나이트</title>
+  <link rel="stylesheet" href="site.css?v=trunk-under-branches">
+  <link rel="stylesheet" href="original-tree.css?v=gold5">
+  <link rel="stylesheet" href="tree-model.css?v=gold5">
+  <link rel="stylesheet" href="ornaments.css?v=gold5">
+</head>
+<body>
+  <header class="top">
+    <div class="frame header-frame">
+      <img class="header-image" src="assets/design/bg-header.jpg" width="1440" height="541" alt="">
+      <nav class="tabs" aria-label="이벤트 메뉴">
+        <a class="tab tab-tree" href="#wish-tree" aria-current="page"><img src="assets/design/tab-1.png" width="452" height="444" alt="소원트리"></a>
+        <a class="tab tab-one" href="#event-1"><img src="assets/design/tab-2.png" width="448" height="418" alt="이벤트 01"></a>
+        <a class="tab tab-two" href="https://event.edgerank.co.kr/kindoh/#event-2"><img src="assets/design/tab-3.png" width="452" height="418" alt="이벤트 02"></a>
+      </nav>
+    </div>
+  </header>
+  <main class="hero" id="wish-tree">
+    <div class="frame design-frame">
+      <img class="campaign-background" src="assets/design/bg-main.jpg" width="1440" height="10000" alt="">
+      <div class="campaign-art">
+        <h1 id="tree-heading" class="title">
+          <span class="screen-reader">꿈꾸는 소원트리</span>
+          <img class="title-first" src="assets/design/title-kkumkkuneun.png" width="299" height="105" alt="">
+          <img class="title-second" src="assets/design/title-wonteuri.png" width="705" height="188" alt="">
+        </h1>
+        <img class="sparkle sparkle-a" src="assets/design/sparkle-lg.png" width="117" height="133" alt="">
+        <img class="sparkle sparkle-b" src="assets/design/sparkle-sm1.png" width="63" height="72" alt="">
+        <p class="lead">아이의 편안한 밤을 위해 탄생한<br><strong>킨도 베베가드 나이트</strong><br><span class="lead-gap"></span>올겨울, 우리 가족의 소원을 나누고<br>특별한 크리스마스 트리를 함께 완성해 주세요!</p>
+
+        <div class="photo-stage" id="tree-stage">
+          <div id="original-tree-view" tabindex="0" role="region" aria-label="소원트리. 좌우로 끌거나 방향키를 눌러 한 바퀴 돌려보세요. 명패를 누르면 소원이 크게 보여요."></div>
+          <div class="tree-glow" aria-hidden="true"></div>
+          <p class="model-fallback-note" role="status">이 기기에서는 정면 사진으로 소원을 볼 수 있어요.</p>
+          <span id="rear" aria-hidden="true"></span>
+          <div class="tree-control-rail">
+            <div class="photo-controls" role="group" aria-label="트리 회전">
+              <span class="heading-readout"><span id="heading-name">정면</span> <span id="angle-reading">0°</span></span>
+              <button type="button" id="spin-toggle" aria-label="자동 회전" aria-pressed="true">회전 정지</button>
+              <button type="button" id="tilt-left" aria-label="왼쪽으로 45도 돌리기">왼쪽</button>
+              <button type="button" id="tilt-right" aria-label="오른쪽으로 45도 돌리기">오른쪽</button>
+              <button type="button" id="tilt-rear">뒷면 보기</button>
+              <button type="button" id="tilt-reset" hidden>정면 보기</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="wishes" id="wishes" aria-labelledby="wishes-heading">
+          <h2 id="wishes-heading" class="wishes-heading">
+            <span class="screen-reader">소원 오너먼트</span>
+            <img src="assets/design/title-ornament.png" width="515" height="88" alt="">
+          </h2>
+          <div id="ornament-carousel"></div>
+          <p class="hint">좌우로 스크롤하여 더 많은 소원을 만나보세요.</p>
+        </section>
+        <img class="sparkle sparkle-c" src="assets/design/sparkle-lg2.png" width="111" height="127" alt="">
+        <img class="sparkle sparkle-d" src="assets/design/sparkle-sm2.png" width="57" height="65" alt="">
+        <div class="falling-snow" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <section class="participation" id="event-1" aria-label="우리 가족 소원 쓰기">
+        <form class="wish-form" id="wish-form">
+          <label for="wish-text">우리 가족 소원 쓰기</label>
+          <div class="wish-input-row">
+            <input id="wish-text" type="text" placeholder="우리 가족 소원 (24자 이내)" required autocomplete="off" aria-describedby="wish-count wish-storage">
+            <button type="submit">소원 걸기</button>
+          </div>
+          <div class="wish-feedback">
+            <div><span role="status" id="wish-result"></span> <a id="my-tree" href="#tree-stage" hidden>트리에서 보기</a></div>
+            <span id="wish-count">0 / 24자</span>
+          </div>
+          <p id="wish-storage">시안에 작성한 소원은 이 브라우저에 저장돼요.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <dialog class="wish-dialog" id="wish-detail" aria-labelledby="detail-title">
+    <h2 id="detail-title" class="screen-reader">트리에 걸린 소원</h2>
+    <div class="wish-detail-art">
+      <img id="detail-art" alt="">
+      <p id="detail-text"></p>
+    </div>
+    <div class="wish-dialog-controls">
+      <button id="choose-wish" type="button">목록에서 보기</button>
+      <button id="close-wish" type="button" autofocus>닫기</button>
+    </div>
+  </dialog>
+  <script src="front-reference.js?v=gold5" defer></script>
+  <script src="tree-model.js?v=gold5" defer></script>
+  <script src="ornament-model.js?v=gold5" defer></script>
+  <script src="fir-surface.js?v=gold5" defer></script>
+  <script src="lamp-spill.js?v=gold5" defer></script>
+  <script src="print-clearance.js?v=gold5" defer></script>
+  <script src="front-turn.js?v=gold5" defer></script>
+  <script src="ornaments.js?v=gold5" defer></script>
+  <script src="wish-form.js?v=gold5" defer></script>
+  <script src="tree-navigation.js?v=auto1" defer></script>
+</body>
+</html>
