@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#00112f">
   <meta name="description" content="올겨울, 우리 가족의 소원을 나누고 특별한 크리스마스 트리를 함께 완성해 주세요!">
   <title>꿈꾸는 소원트리 | 킨도 베베가드 나이트</title>
-  <link rel="stylesheet" href="site.css?v=trunk-under-branches">
+  <link rel="preload" as="image" href="assets/original-tree-fast.webp" fetchpriority="high">
+  <link rel="stylesheet" href="site.css?v=fast2">
   <link rel="stylesheet" href="original-tree.css?v=gold5">
   <link rel="stylesheet" href="tree-model.css?v=gold5">
   <link rel="stylesheet" href="ornaments.css?v=gold5">
@@ -38,16 +39,17 @@
         <div class="photo-stage" id="tree-stage">
           <div id="original-tree-view" tabindex="0" role="region" aria-label="소원트리. 좌우로 끌거나 방향키를 눌러 한 바퀴 돌려보세요. 명패를 누르면 소원이 크게 보여요."></div>
           <div class="tree-glow" aria-hidden="true"></div>
-          <p class="model-fallback-note" role="status">이 기기에서는 정면 사진으로 소원을 볼 수 있어요.</p>
+          <p class="model-loading-note" role="status">트리 회전을 준비하고 있어요…</p>
+          <p class="model-fallback-note" role="status">3D 회전을 불러오지 못했어요. 정면에서 소원을 볼 수 있어요.</p>
           <span id="rear" aria-hidden="true"></span>
           <div class="tree-control-rail">
             <div class="photo-controls" role="group" aria-label="트리 회전">
               <span class="heading-readout"><span id="heading-name">정면</span> <span id="angle-reading">0°</span></span>
-              <button type="button" id="spin-toggle" aria-label="자동 회전" aria-pressed="true">회전 정지</button>
-              <button type="button" id="tilt-left" aria-label="왼쪽으로 45도 돌리기">왼쪽</button>
-              <button type="button" id="tilt-right" aria-label="오른쪽으로 45도 돌리기">오른쪽</button>
-              <button type="button" id="tilt-rear">뒷면 보기</button>
-              <button type="button" id="tilt-reset" hidden>정면 보기</button>
+              <button type="button" id="spin-toggle" disabled aria-label="자동 회전" aria-pressed="true">회전 정지</button>
+              <button type="button" id="tilt-left" disabled aria-label="왼쪽으로 45도 돌리기">왼쪽</button>
+              <button type="button" id="tilt-right" disabled aria-label="오른쪽으로 45도 돌리기">오른쪽</button>
+              <button type="button" id="tilt-rear" disabled>뒷면 보기</button>
+              <button type="button" id="tilt-reset" disabled hidden>정면 보기</button>
             </div>
           </div>
         </div>
@@ -91,15 +93,10 @@
       <button id="close-wish" type="button" autofocus>닫기</button>
     </div>
   </dialog>
-  <script src="front-reference.js?v=gold5" defer></script>
-  <script src="tree-model.js?v=gold5" defer></script>
+  <script src="front-reference.js?v=fast2" defer></script>
   <script src="ornament-model.js?v=gold5" defer></script>
-  <script src="fir-surface.js?v=gold5" defer></script>
-  <script src="lamp-spill.js?v=gold5" defer></script>
-  <script src="print-clearance.js?v=gold5" defer></script>
-  <script src="front-turn.js?v=gold5" defer></script>
   <script src="ornaments.js?v=gold5" defer></script>
   <script src="wish-form.js?v=gold5" defer></script>
-  <script src="tree-navigation.js?v=auto1" defer></script>
+  <script src="load-tree.js?v=fast2" defer></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
   image.alt = '금빛 별과 가족의 소원 장식이 걸린 킨도 크리스마스 트리';
   image.draggable = false;
   image.fetchPriority = 'high';
-  image.src = window.WISH_ORIGINAL_PHOTO || 'assets/original-tree.webp';
+  image.src = window.WISH_ORIGINAL_PHOTO || 'assets/original-tree-fast.webp';
   const layer = document.createElement('div');
   layer.className = 'original-wish-layer';
   const lightPlate = new Image(sourceWidth, cropHeight);

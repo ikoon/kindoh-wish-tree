@@ -140,6 +140,9 @@ html:has(#rear:target) { scroll-behavior: auto; }
 }
 #original-tree-view .tree-example-cue { z-index:4; }
 .model-fallback-note { display:none; }
+.model-loading-note { display:none; }
+#original-tree-view:not([data-front-projection]):not([data-tilt-renderer="photo"]) ~ .model-loading-note,
+#original-tree-view[data-front-projection="fallback"][data-tilt-renderer="model3d"] ~ .model-fallback-note,
 #original-tree-view[data-tilt-renderer="photo"] ~ .model-fallback-note {
   display:block;
   position:absolute;
